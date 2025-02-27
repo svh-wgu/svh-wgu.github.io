@@ -1,0 +1,570 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.scrollContainer {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scrollPanel {
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255,255,255,.1), rgba(255,255,255,.1));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100000000;
+    
+}
+
+.scrolled{
+  background-image: linear-gradient(rgba(10,150,150), 60%, rgba(255, 255, 255,.1));
+}
+
+nav .logo{
+    width: 150px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+nav a:hover{
+    text-decoration: underline;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 160px;
+    font-weight: 600; 
+    color: #fff; 
+}
+
+.content h2 {
+    font-size: 80px;
+    font-weight: 600; 
+    color: #fff; 
+}
+
+.content a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 400;
+    border: 2px solid #fff;
+    padding: 14px 70px;
+    border-radius: 50px;
+    margin-top: 20px;
+    background-color: rgba(255,255,255, .1);
+}
+
+.content a:hover {
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.bgVideo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.hero2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.aboutVideo {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    filter: brightness(.8);
+}
+
+.bookVideo {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    filter: brightness(.7);
+}
+
+.staysVideo {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    min-width: 100vw;
+    min-height: 100vh;
+    overflow: hidden;
+    filter: brightness(.7);
+}
+
+.textbox  {
+    font-size: 24px;
+    font-weight: 400; 
+    text-align: justify;
+    display: inline-block;
+    padding: 14px 70px;
+    color: white;
+    width: 100%; 
+    background: linear-gradient(rgba(255, 255, 255, .2), 60%, rgba(0,0,0,.2));
+    margin: 25px;
+    padding: 50px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+
+    p {
+        line-height: 1.5;
+        padding-bottom: 5px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    ul {
+        text-decoration: none;
+
+        text-align: center;
+        justify-content: space-between;
+    }
+    ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 50px;
+    }
+}
+
+.bookCards {
+    background-color: rgba(255, 255, 255, .2);
+    margin: 25px;
+    padding: 50px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    height: 75vh;
+}
+
+.bookNav {
+    text-align: left;
+}
+
+.bookNav span:hover {
+    text-decoration: underline;  
+}
+
+
+.bookNav span {
+    padding: 10px;
+    font-weight: 600;
+    color: #fff;
+    font-size: 20px;
+}
+
+.bookOpt {
+    display: grid;
+    grid-template-areas: 
+        "flights options"
+        "cruises options";
+    grid-template-columns: 20% auto;
+    grid-template-rows: 25vh 25vh;
+}
+
+#flightCard {
+    margin: 0;
+    padding: 0;
+    justify-items: center;
+    grid-area: flights;
+    background: url(media/FLIGHTS\ \(1\).png) center;
+    background-size: cover;
+}
+
+#cruiseCard {
+    grid-area: cruises;
+    background: url(media/FLIGHTS\ \(2\).png) center;
+    background-size: cover;
+}
+
+.inactiveCard {
+    filter: brightness(.7);
+}
+
+#optCard  {
+    grid-area: options;
+    text-align: center;
+    margin: auto;
+}
+
+#optCard h2 {
+    font-size: xx-large;
+}
+
+#optCardA {
+    grid-area: options;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#optCardB {
+    grid-area: options;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover {
+    border: 4px white solid;
+    filter: brightness(1);
+    border-radius: 50px;
+}
+
+form {
+    background-color: rgba(255,255,255,.6);
+    border-radius: 10px;
+    margin: 15px;
+    padding: 12px;
+    width: 100%;
+}
+
+form a {
+    background-color: rgba(0,0,0, .5);
+}
+
+form a:hover {
+   filter: brightness(.45)
+}
+
+#optCardA table {
+    text-align: right;
+    width: 100%;
+}
+
+#optCardB table {
+    width: 100%;
+}
+
+#optCardB img {
+    width: 250px;
+    border: 4px white solid;
+    border-radius: 20px;
+}
+
+.cruiseCard {
+    background-color: rgba(255,255,255,.6);
+    border-radius: 10px;
+    margin: 10px auto;
+    padding: 10px;
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+}
+
+h3 {
+    font-weight: 800;
+    text-shadow: 2px 3px rgba(0, 0, 0, .8);
+    font-size: xx-large;
+    color: #fff;
+}
+
+hr {
+    border:  2px solid rgba(0,0,0, .5);
+    width: 75%;
+
+}
+
+.cruiseCard ul {
+    text-align: left;
+    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+    width: 100%;
+    line-height: 1.25;
+}
+
+.cruiseCard ul a {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width: 50%;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    background-color: rgba(0,0,0,.5 );
+    margin-top: 10px;
+}
+
+.cruiseCard ul a:hover {
+    background-color: rgba(0,0,0,.2);
+}
+
+.cruiseCard form {
+    text-align: left;
+    background-color: rgba(0,0,0,0);
+    padding: 0;
+    margin: 0;
+}
+
+
+input, select{
+    margin-bottom: 25px;
+    padding: 10px;
+}
+
+#flightResults {
+    background-color: rgba(255,255,255,.6);
+    border-radius: 10px;
+    margin: 15px;
+    padding: 80px;
+    width: 100%;
+    font-size: 18px;
+}
+
+
+.panelStays .content {
+    background-color: rgba(0,0,0, .2);
+    border: 2px solid #fff;
+    border-radius: 50px;
+    width: 80%;
+    height: fit-content;
+    box-sizing: border-box; 
+}
+
+.stayCont {
+    color: #fff;
+
+    .stayNav {
+        color:#fff;
+        ul {
+            list-style-type: none;
+
+            li {
+                display: inline;
+            }
+            li a{
+                border: 2px solid transparent;
+            }
+            li a:hover {
+                border: 2px solid white;
+                background-color: rgba(255, 255, 255, .5);
+            }
+            li .active {
+                color: #fff;
+                filter: brightness(1.5);
+                text-decoration: underline;
+            }
+            li .active:hover {
+                border: 2px solid white;
+            }
+        }
+    }
+
+    .hotelsSlide, .bbSlide, .resortSlide {
+        display: flex;
+        justify-content: center;
+        left: 0px;
+    }
+
+    .swiper {
+        height: fit-content;
+        border: none;
+        background-color: rgba(0,0,0,0);
+    }
+    
+    .hotelsSlide {
+        max-width: 1100px;
+        margin: 0 60px 35px;
+        padding: 10px 10px;
+        overflow: hidden;
+    
+        .swiper-pagination-bullet {
+            background: rgba(255, 255, 255, .75);
+            height: 20px;
+            width: 20px;
+            opacity: .75;
+        } 
+
+        .swiper-pagination-bullet-active {
+            background: white;
+            opacity: 1;
+        }
+    
+        .swiper-slide-button {
+            color: #fff;
+            margin-top: -35px;
+        }
+
+        .swiper-slide-button:hover {
+            color: #fff;
+            text-shadow: 0 0 10px white;
+        }
+
+        .swiper-slide.swiper-slide-active {
+            filter: brightness(1.1);
+            box-shadow: 0 10px 10px rgba(255,255,255, .25);
+        }
+
+        .swiper-slide:not(.swiper-slide-active) {
+           filter: brightness(.8);
+           opacity: .9;
+        }
+
+         .swiper-slide {
+            height: auto;
+        }
+    }
+    .stayList {
+
+        
+        .hotelCard {
+            list-style: none;
+
+
+            .cardLink {
+                user-select: none;
+                display: block;
+                background: rgba(255, 255, 255, 1);
+                padding: 18px;
+                margin: none;
+                border-radius:  18px;
+                text-decoration: none;
+                border: 2px solid  transparent;
+                height: 100%;
+                margin-top: 0;
+
+                .stars {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .fa {
+                    color: grey;
+                }
+            
+                .checked {
+                    color: orange;
+                };
+
+               .cardImage  {
+                    width: 100% ;
+                    aspect-ratio: 16/9;
+                    object-fit: cover;
+                    border-radius: 10px;
+                };
+    
+                .badge {
+                    color: #ffff;
+                    padding: 8px 16px;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    margin: 12px 0 12px;
+                    background-color: #5372F0;
+                    width: fit-content;
+                    border-radius: 50px;
+                };
+    
+                .cardTitle {
+                    margin-top: 10px;
+                    font-size: 1rem;
+                    color: #000;
+                    font-weight: 500;
+                    text-align: justify;
+                };
+
+                .address {
+                    display: flex;
+                    justify-content: space-between;
+                    color: #000;
+                    font-size: 16px;
+                    text-align: justify;
+
+                    i {
+                        padding: 0 5px;
+                    }
+                }
+    
+                .cardButton {
+                    background: rgba(0, 0, 0, .4);
+                    color: #fff;
+                    font-weight: 400;
+                    border: 2px solid #fff;
+                    padding: 14px 28px;
+                    border-radius: 50px;
+                    margin-top: 20px;
+                }
+                
+            };
+    
+            .cardLink:hover {
+                border-color: #5372F0;
+    
+                .cardButton {
+                    color: #fff;
+                    background: rgba(0, 0, 0, .3);
+                }
+            }
+        }
+    };
+};
+
