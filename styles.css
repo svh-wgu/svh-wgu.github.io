@@ -568,9 +568,14 @@ input, select{
     };
 };
 
-@media screen and (max-height: 1280px){
+@media only screen and (max-height: 700px) {
     .panelStays .content {
-        height: 75vh;
+       height: 80%;
+
+       .hotelsSlide {
+            img, video {
+                display: none;
+            }
+       }
     }
-    
 }
