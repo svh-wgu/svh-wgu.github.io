@@ -575,6 +575,7 @@ input, select{
        .hotelsSlide {
             img, video {
                 display: none;
+                
             }
        }
     }
