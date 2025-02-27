@@ -571,12 +571,6 @@ input, select{
 @media only screen and (max-height: 700px) {
     .panelStays .content {
        height: 80%;
-
-       .hotelsSlide {
-            img, video {
-                display: none;
-                
-            }
-       }
+       padding-bottom: none;
     }
 }
