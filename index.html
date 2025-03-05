@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Taniti</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=warning" />
+
+
+</head>
+
+<body>
+
+    <div class="scrollContainer">
+        <video preload="auto" autoplay muted class="bgVideo">
+            <source src="media/5552828-hd_1920_1080_30fps.mp4" type="video/mp4">
+        </video>
+
+        <div class="scrollPanel panelHero" id="home">
+            <div class="hero">
+                <nav id="headerNav">
+                    <a href="#home"><img src="media/tanitiLogo.png" class="logo"></a>
+                    <ul>
+                        <li><a href="#about">Discover</a></li>
+                        <li><a href="#book">Booking</a></li>
+                        <li><a href="#stays">Accomodations</a></li>
+                        <li><a href="#todo">Attractions</a></li>
+                    </ul>
+                </nav>
+                <div class="content">
+                    <h1>Travel Taniti</h1>
+                    <a href="#about" class="ctaButton">Explore</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scrollPanel panelAbout" id="about">
+            <div class="hero">
+                <nav id="headerNav">
+                    <a href="#home"><img src="media/tanitiLogo.png" class="logo"></a>
+                    <ul>
+                        <li><a href="#about">Discover</a></li>
+                        <li><a href="#book">Booking</a></li>
+                        <li><a href="#stays">Accomodations</a></li>
+                        <li><a href="#todo">Attractions</a></li>
+                    </ul>
+                </nav>
+                <div class="content">
+                    <h2>Discover Taniti</h2>
+
+                    <p>Tucked away in the Pacific, Taniti is a small yet stunning island brimming with natural beauty
+                        and cultural charm. Spanning less than 500 square miles, the island boasts diverse landscapes,
+                        from white sandy beaches and rocky shores to lush rainforests and a breathtaking mountainous
+                        interior crowned by an active volcano <br> Most visitors find themselves drawn to Taniti City,
+                        the island’s vibrant hub, where native architecture meets the tranquil waters of Yellow Leaf
+                        Bay. Beyond the city, adventure awaits—whether it’s a guided boat or bus tour around the island,
+                        an immersive hike through the rainforest, or an awe-inspiring visit to the active volcano. <br>
+                        Once a quiet island sustained by fishing and agriculture, Taniti is now an emerging travel
+                        destination that perfectly balances tradition, relaxation, and adventure. Whether you're here to
+                        explore or unwind, Taniti offers an unforgettable island experience.</p>
+
+                    <ul>
+                        <li><a href="#todo" class="ctaButton">Plan your adventure</a></li>
+                        <li><a href="#book" class="ctaButton">Book your adventure</a></li>
+                    </ul>
+                </div>
+                <div class="spacer">&nbsp</div>
+            </div>
+        </div>
+
+        <div class="scrollPanel panelBook" id='book'>
+            <div class="hero">
+                <nav id="headerNav">
+                    <a href="#home"><img src="media/tanitiLogo.png" class="logo"></a>
+                    <ul>
+                        <li><a href="#about">Discover</a></li>
+                        <li><a href="#book">Booking</a></li>
+                        <li><a href="#stays">Accomodations</a></li>
+                        <li><a href="#todo">Attractions</a></li>
+                    </ul>
+                </nav>
+                <div class="content">
+                    <div class="bookNav">
+                        <span>Book My Trip</span>
+                        <span onclick="alert('No reservations found.')">View My Reservations</span>
+                    </div>
+
+                    <h2>Your adventure begins here.</h2>
+
+                    <div class="bookOpt">
+                        <div class="card" id="flightCard">
+                        </div>
+
+                        <div class="card" id="cruiseCard">
+                        </div>
+
+                        <div id="optCard" class="defOpt">
+                            <h2>Select a method of travel to begin...</h2>
+                        </div>
+
+                        <div id="optCardA" style="display: none">
+                            <form action="" id="flightSearch">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label for="depart">Departing City:</label>
+                                            <input type="text" name="depart" id="depart">
+                                        </td>
+                                        <td>
+                                            <label for="date">Depart on:</label>
+                                            <input type="date" name="" id="ddate">
+                                        </td>
+                                        <td>
+                                            <label for="returndate">Return on:</label>
+                                            <input type="date" name="returndate" id="rdate">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" id="return">
+                                            <label for="nearby">Include nearby airports?</label>
+                                        </td>
+                                        <td>
+                                            <label for="pass">Passengers:</label>
+                                            <select name="passcount" id="pass">
+                                                <option value="1">1</option>
+                                                <option value="1">2</option>
+                                                <option value="1">3</option>
+                                                <option value="1">4</option>
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <label for="class">Class:</label>
+                                            <select name="class" id="class">
+                                                <option value="1">Economy</option>
+                                                <option value="1">First</option>
+                                                <option value="1">Business</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <a href="#blank" id="findFlights" class="ctaButton">Find my flight</a>
+                                <hr>
+                                <div id="flightResults" style="display: none;">
+                                    <p><span class="material-symbols-outlined">warning</span>No Flights Found!</p>
+                                    <br>
+                                    <br>
+                                    <p style="color: red; font-weight: 600; align-self: center; font-size: .8em;">For
+                                        Demo Purposes Only</p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div id="optCardB" style="display: none">
+
+                            <div class="cruiseCard" id="cruiseA">
+                                <img src="media/georgy-trofimov-xEJoSsDCnR8-unsplash.jpg" alt="Cruise Ship">
+                                <ul>
+                                    <li>
+                                        <h3>Queen of the Pacific</h3>
+                                    </li>
+                                    <li class="cruiseCompany">Crystal Cruise Line</li>
+                                    <hr>
+                                    <li>Departing from: <b>San Diego, CA</b></li>
+                                    <li>Ports of Call: Yellow Leaf Bay, Taniti</li>
+                                    <li>Sailing Dates: March - October</li>
+                                    <li onclick="alert('For Demo Purposes Only.')"><a href="#" class="ctaButton">Search
+                                            Dates and Book</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="cruiseCard" id="cruiseB">
+                                <img src="media/peter-hansen-MeGmdPNe36w-unsplash.jpg" alt="Cruise Ship">
+                                <ul>
+                                    <li>
+                                        <h3>The Radiant Gem</h3>
+                                    </li>
+                                    <li class="cruiseCompany">Royal Pacific</li>
+                                    <hr>
+                                    <li>Departing from: <b>Cabo San Lucas, Mexico</b></li>
+                                    <li>Ports of Call: Pofai Bay, Bora Bora. Yellow Leaf Bay, Taniti</li>
+                                    <li>Sailing Dates: March - October</li>
+                                    <li onclick="alert('For Demo Purposes Only.')"><a href="#" class="ctaButton">Search
+                                            Dates and Book</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="cruiseCard" id="cruiseC">
+                                <img src="media/fernando-jorge-Q2B08QyXKC4-unsplash.jpg" alt="Cruise Ship">
+                                <ul>
+                                    <li>
+                                        <h3>Dragon of the Seas</h3>
+                                    </li>
+                                    <li class="cruiseCompany">Asuka Cruise</li>
+                                    <hr>
+                                    <li>Departing from: <b>Yokohama, Japan</b></li>
+                                    <li>Ports of Call: Yellow Leaf Bay, Taniti</li>
+                                    <li>Sailing Dates: May - August</li>
+                                    <li onclick="alert('For Demo Purposes Only.')"><a href="#" class="ctaButton">Search
+                                            Dates and Book</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="cruiseCard" id="cruiseD">
+                                <img src="media/stephanie-klepacki-hXMuT9EDSmo-unsplash.jpg" alt="Cruise Ship">
+                                <ul>
+                                    <li>
+                                        <h3>Taniwha</h3>
+                                    </li>
+                                    <li class="cruiseCompany">Polynesian Cruises</li>
+                                    <hr>
+                                    <li>Departing from: <b>Brisbane, Australia</b></li>
+                                    <li>Ports of Call: Yellow Leaf Bay, Taniti</li>
+                                    <li>Sailing Dates: Feburary - November</li>
+                                    <li onclick="alert('For Demo Purposes Only.')"><a href="#" class="ctaButton">Search
+                                            Dates and Book</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="spacer">&nbsp</div>
+            </div>
+        </div>
+
+        <div class="scrollPanel panelStays" id="stays">
+            <div class="hero">
+                <nav id="headerNav">
+                    <a href="#home"><img src="media/tanitiLogo.png" class="logo"></a>
+                    <ul>
+                        <li><a href="#about">Discover</a></li>
+                        <li><a href="#book">Booking</a></li>
+                        <li><a href="#stays">Accomodations</a></li>
+                        <li><a href="#todo">Attractions</a></li>
+                    </ul>
+                </nav>
+                <div class="content">
+                    <h2>Stay for a while.</h2>
+
+                    <div class="stayNav">
+                        <ul>
+                            <li><a href="#" id="hotelBut" class="ctaButton active">Hotels</a></li>
+                            <li><a href="#" id="bbBut" class="ctaButton">Bed & Breakfasts</a></li>
+                            <li><a href="#" id="resortBut" class="ctaButton">Resorts</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hotelsSlide">
+                            <div class="content swiper">
+                                <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/ovidiu-8SIjWhQBFZQ-unsplash.jpg" alt="Hotel Terme"
+                                                class="cardImage" style="object-position: top;">
+                                            <div class="stars">
+                                                <p class="badge hc1">Hotel Terme</p>
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </div>
+                                            </div>
+                                            <div class="address">
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf041;</i> Taniti City
+                                                </span>
+                                                <span>
+                                                    <i class="fa">&#xf095;</i> +689 55 55 81
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Hotel Terme offers a welcoming and relaxing
+                                                atmosphere, perfect for unwinding. Enjoy comfortable rooms, refreshing
+                                                drinks at our on-site bar, and easy access to nearby attractions.
+                                                Whether you're here for a short getaway or an extended stay, our
+                                                friendly service ensures a pleasant experience throughout your visit.
+                                                Relax, explore, and make lasting memories at Hotel Terme.</h2>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/casey-lovegrove-KfOl3-ZWnDA-unsplash.jpg" alt="Hotel Terme"
+                                                class="cardImage">
+                                            <div class="stars">
+                                                <p class="badge hc2">Hotel Tramontano</p>
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </div>
+                                            </div>
+                                            <div class="address">
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf041;</i> Taniti City
+                                                </span>
+                                                <span>
+                                                    <i class="fa">&#xf095;</i> +689 55 55 22
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Located in the heart of downtown, Hotel Tramontano
+                                                offers a comfortable and convenient stay with easy access to shops,
+                                                restaurants, and local attractions. Enjoy well-appointed rooms, a
+                                                friendly atmosphere, and a perfect spot to unwind after a day of
+                                                exploring the city. Whether you're here for business or leisure, our
+                                                central location makes discovering the area effortless. </h2>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/ben-grayland-zWnPoFMTXCs-unsplash.jpg" alt="Hotel Terme"
+                                                class="cardImage">
+                                            <div class="stars">
+                                                <p class="badge hc3">Hotel Rosenlaui</p>
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </div>
+                                            </div>
+                                            <div class="address">
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf041;</i> Merriton Landing
+                                                </span>
+                                                <span>
+                                                    <i class="fa">&#xf095;</i> +689 55 55 99
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Welcome to Hotel Rosenlaui, a charming getaway nestled
+                                                in a picturesque location. Enjoy cozy rooms with beautiful views,
+                                                friendly service, and a peaceful atmosphere. Located in the heart of
+                                                nature, our hotel offers easy access to hiking trails and outdoor
+                                                adventures. Whether you’re here to relax or explore, Hotel Rosenlaui
+                                                provides the perfect base for your journey.</h2>
+    
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/ha-nguy-n--lq0Ofvv1pA-unsplash.jpg" alt="Hotel Terme"
+                                                class="cardImage">
+                                            <div class="stars">
+                                                <p class="badge hc4">Dolphin Motel <br></p>
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </div>
+                                            </div>
+                                            <div class="address">
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf041;</i> Yellow Leaf Bay
+                                                </span>
+                                                <span>
+                                                    <i class="fa">&#xf095;</i> +689 55 55 55
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Experience elegance and comfort at Dolphin Hotel, a
+                                                perfect getaway by the ocean. Enjoy stylish accommodations,a serene spa,
+                                                and breathtaking views. Relax by the pool, sip cocktails at the tiki
+                                                bar, or explore exciting water activities. Whether for leisure or
+                                                business, Dolphin Hotel offers exceptional hospitality and unforgettable
+                                                moments.</h2>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/jean-philippe-delberghe-r2Ya7WeVSco-unsplash.jpg"
+                                                alt="Hotel Terme" class="cardImage">
+                                            <div class="stars">
+                                                <p class="badge hc5">Hotel Marina</p>
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </div>
+                                            </div>
+                                            <div class="address">
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf041;</i> Yellow Leaf Bay
+                                                </span>
+                                                <span>
+                                                    <i class="fa">&#xf095;</i> +689 55 55 42
+                                                </span>
+                                            </div>
+    
+                                            <h2 class="cardTitle">Nestled along the coast, Hotel Marina offers a perfect
+                                                blend of comfort and sophistication. Relax in elegant rooms with
+                                                stunning ocean views, indulge in exquisite dining, and rejuvenate at our
+                                                tranquil spa. Enjoy the infinity pool, rooftop bar, and exciting
+                                                waterfront activities. Whether for a romantic getaway or a business
+                                                retreat, Hotel Marina ensures a memorable and refreshing stay.</h2>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-slide-button swiper-button-prev"></div>
+                                <div class="swiper-slide-button swiper-button-next"></div>
+                                </div>
+
+                            </div>
+
+
+                    </div>
+
+                    <div class="bbSlide" style="display: none" !>
+                        <div class="content swiper">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/pexels-amaurymic-11163914.jpg" alt="Villa Floresta"
+                                                class="cardImage" style="object-position: top;">
+                                            <p class="badge hc1">Villa Floresta</p>
+                                            <div class="address">
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf041;</i> Taniti City
+                                                </span>
+                                                <span>
+                                                    <i class="fa">&#xf095;</i> +689 55 55 22
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Welcome to Villa Floresta, a charming bed and
+                                                breakfast offering comfortable rooms, homemade breakfasts, and
+                                                personalized service in a warm, welcoming atmosphere. Nestled in a quiet
+                                                area with easy access to local attractions, Villa Floresta is the
+                                                perfect place to relax and unwind. Whether you're here for a short stay
+                                                or a longer retreat, we look forward to making your visit memorable.
+                                            </h2>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/pexels-martinpechy-1028225.jpg" class="cardImage">
+                                            <p class="badge hc2">Aescher Guesthouse</p>
+                                            <div class="address">
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf041;</i> FG5C+79 Teitei
+                                                </span>
+                                                <span>
+                                                    <i class="fa">&#xf095;</i> +689 55 55 26
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Nestled in the breathtaking mountains, Aescher
+                                                Guesthouse offers a cozy hideaway with stunning views and a peaceful
+                                                atmosphere. Wake up to a delicious breakfast made and enjoy comfortable
+                                                rooms surrounded by nature. Whether you're here for hiking, exploring,
+                                                or simply relaxing, our location provides the perfect base for both
+                                                adventure and tranquility. </h2>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src='media/pexels-samuel-wolfl-628277-1427539.jpg' class="cardImage">
+                                            <p class="badge hc3">The Cobweb Inn</p>
+                                            <div class="address">
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf041;</i> Merriton Landing
+                                                </span>
+                                                <span>
+                                                    <i class="fa">&#xf095;</i> +689 24 55 55
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Tucked just outside the bustling capital city, Cobwebb
+                                                Inn offers relaxing rooms, a friendly atmosphere, and a delicious
+                                                homemade breakfast to fuel your day. With convenient access to the
+                                                city’s attractions and a tranquil setting away from the crowds, Cobwebb
+                                                Inn is the perfect place to unwind and explore.</h2>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/pexels-michael-hall-202386080-13304716.jpg"
+                                                class="cardImage">
+                                            <p class="badge hc4">River Street Inn</p>
+                                            <div class="address">
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf041;</i> Merriton Landing
+                                                </span>
+                                                <span>
+                                                    <i class="fa">&#xf095;</i> +689 99 55 55
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Located just steps from the river, River Street Inn
+                                                offers a cozy and welcoming atmosphere with comfortable rooms and a
+                                                convenient location. Enjoy a refreshing drink at our on-site bar,
+                                                perfect for relaxing after a day of exploring the area. Whether you're
+                                                here for a peaceful stay or looking to enjoy nearby attractions, River
+                                                Street Inn provides a great spot to unwind and enjoy your time.</h2>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-slide-button swiper-button-prev"></div>
+                                <div class="swiper-slide-button swiper-button-next"></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="resortSlide" style="display: none;">
+                        <div class="content swiper">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/pexels-asadphoto-3601422.jpg" class="cardImage">
+                                            <div class="stars">
+                                                <p class="badge hc4">Tai Marino Resort & Spa</p>
+                                                <div class="rating">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                </div>
+                                            </div>
+                                            <div class="address">
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf041;</i> Merriton Landing
+                                                </span>
+                                                <span>
+                                                    <i class="fa">&#xf095;</i> +689 55 55 26
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Escape to Tai Marino Resort & Spa, a luxurious 4-star
+                                                resort. Experience ultimate relaxation with elegant accommodations,
+                                                world-class amenities, and a serene spa offering rejuvenating
+                                                treatments. Enjoy gourmet dining or unwind by the crystal-clear waters.
+                                                Whether you're seeking adventure or tranquility, Tai Marino Resort & Spa
+                                                provides an unforgettable island getaway.</h2>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-slide-button swiper-button-prev" style="display: none;"></div>
+                                <div class="swiper-slide-button swiper-button-next" style="display: none;"></div>
+    
+                            </div> 
+
+
+                        </div> 
+                    </div>
+                </div>
+                <div class="spacer">&nbsp</div>
+            </div>
+        </div>
+
+        <div class="scrollPanel panelTodo" id="todo">
+            <div class="hero">
+                <nav id="headerNav">
+                    <a href="#home"><img src="media/tanitiLogo.png" class="logo"></a>
+                    <ul>
+                        <li><a href="#about">Discover</a></li>
+                        <li><a href="#book">Booking</a></li>
+                        <li><a href="#stays">Accomodations</a></li>
+                        <li><a href="#todo">Attractions</a></li>
+                    </ul>
+                </nav>
+
+                <div class="content" id="todoHero">
+
+                    <h2>See, Do, Explore. </h2>
+
+                    <div class="stayNav">
+                        <ul>
+                            <li><a href="#" id="todoBut" class="ctaButton active">Things to Do</a></li>
+                            <li><a href="#" id="eventsBut" class="ctaButton">Calendar of Events</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="todoSlide">
+                        <div class="content swiper">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="hotelCard swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/joel-casilla-2MSTvVppJBM-unsplash.jpg" class="cardImage">
+                                            <p class="badge sC">Swim & Sunbathe</p>
+                                            <h2 class="cardTitle">Enjoy the ultimate beach day with refreshing swims in
+                                                crystal-clear waters and plenty of time to sunbathe on golden sands. Whether
+                                                you’re looking to unwind or soak up the sun, the island’s serene beaches
+                                                offer the perfect escape for relaxation and rejuvenation.</h2>
+                                        </a>
+                                    </li>
+                                    <li class="hotelCard swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/pexels-guy-kawasaki-783630-1654489.jpg" class="cardImage">
+                                            <p class="badge sC">Surf</p>
+                                            <h2 class="cardTitle">Catch the perfect wave with a thrilling surfing session on
+                                                the island’s stunning beaches. Ride the crystal-clear waters, feel the rush
+                                                of the surf, and enjoy the island’s laid-back beach atmosphere. With
+                                                breathtaking views and ideal surf conditions, this adventure offers the
+                                                ultimate combination of excitement and relaxation for your vacation!</h2>
+                                        </a>
+                                    </li>
+                                    <li class="hotelCard swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <video src="media/4231746-sd_960_540_24fps.mp4" preload="auto" autoplay loop muted class="cardImage" style="object-fit: cover;"></video>
+                                            <p class="badge sC">Ua Ngahere Rainforest</p>
+                                            <h2 class="cardTitle">Venture into the heart of Ua Ngahere Rainforest and
+                                                immerse yourself in its lush greenery and diverse wildlife. Wander through
+                                                winding trails, discover hidden waterfalls, and experience the tranquil
+                                                beauty of one of the island’s most captivating natural wonders. Perfect for
+                                                nature enthusiasts, this adventure offers unforgettable sights and sounds of
+                                                the rainforest.</h2>
+                                        </a>
+                                    </li>
+                                    <li class="hotelCard swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/pexels-chiecharon-913215.jpg" class="cardImage">
+                                            <p class="badge sC">Puia Volcano</p>
+                                            <h2 class="cardTitle">Discover the power and beauty of Puia Volcano, where you
+                                                can explore volcanic craters, witness steaming vents, and enjoy breathtaking
+                                                views of the surrounding landscape. Whether you’re hiking to the summit or
+                                                simply taking in the dramatic scenery, this natural wonder offers an
+                                                unforgettable adventure for thrill-seekers and nature lovers alike.</h2>
+                                        </a>
+                                    </li>
+                                    <li class="hotelCard swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/pexels-bagus-tri-kuncoro-j-1353435-2744596.jpg" class="cardImage">
+                                            <p class="badge sC">Snorkeling & Diving</p>
+                                            <h2 class="cardTitle">Dive into crystal-clear waters and discover vibrant coral
+                                                reefs, exotic marine life, and stunning underwater landscapes. Whether
+                                                you're snorkeling along the shore or diving deeper into the ocean, the
+                                                island offers unforgettable experiences for both beginners and experienced
+                                                enthusiasts. Explore the hidden beauty beneath the surface and make memories
+                                                that will last a lifetime.</h2>
+                                        </a>
+                                    </li>
+                                    <li class="hotelCard swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/pexels-igor-starkov-233202-1660918.jpg" class="cardImage">
+                                            <p class="badge sC">Eat</p>
+                                            <h2 class="cardTitle">Indulge in the island’s vibrant food scene with fresh,
+                                                locally-sourced dishes at charming restaurants. From seafood delights to
+                                                traditional island fare, each meal offers a taste of authentic island
+                                                culture. Enjoy a cozy atmosphere, friendly service, and unforgettable
+                                                flavors that will make your vacation even more memorable.</h2>
+                                        </a>
+                                    </li>
+                                    <li class="hotelCard swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/pexels-sebastian-luna-736234668-19793125.jpg" class="cardImage">
+                                            <p class="badge sC">Golfing</p>
+                                            <h2 class="cardTitle">Get ready for an exciting golfing experience at our
+                                                upcoming world-class golf course, opening next year. Set against
+                                                breathtaking landscapes, this course will offer challenging fairways and
+                                                stunning views for golf enthusiasts of all levels. Stay tuned for the grand
+                                                opening and be among the first to tee off at this incredible new
+                                                destination!</h2>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper-pagination"></div>
+                                
+                            <div class="swiper-slide-button swiper-button-prev"></div>
+                            <div class="swiper-slide-button swiper-button-next"></div>
+                            </div>  
+
+                        </div>
+                    </div>
+
+                    <div class="eventsSlide" style="display: none;">
+                        <div class="content swiper">
+                            <div class="swiper-container">
+                                <ul class="swiper-wrapper">
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <video src="media/13200746_1920_1080_30fps.mp4" class="cardImage" preload="auto"
+                                                autoplay muted loop></video>
+
+                                            <div class="address">
+                                                <p class="badge hc1">Lunar New Year</p>
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf073;</i> 29 January
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Join in the vibrant celebrations of Lunar New Year, where
+                                                traditional customs come to life with colorful parades, delicious feasts,
+                                                and joyful festivities. Experience the excitement of dragon dances, red
+                                                lanterns, and family gatherings, marking the start of a prosperous new year.
+                                                It’s a time for reflection, renewal, and celebrating togetherness with
+                                                friends and loved ones.</h2>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/pexels-aditya-agarwal-623616-1477310.jpg" class="cardImage"></img>
+                                            <div class="address">
+                                                <p class="badge hc1">Matari’i i Raro</p>
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf073;</i> 20 May
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Celebrate Matari’i i Raro, a unique festival that honors
+                                                the island's cultural heritage and natural abundance. This vibrant event
+                                                features traditional dances, music, and rituals that connect the community
+                                                with the land and sea. Enjoy local delicacies, witness captivating
+                                                performances, and experience the deep-rooted customs that bring the
+                                                islanders together in joy and unity.</h2>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <video src="media/2927943-sd_960_506_24fps.mp4" class="cardImage" preload="auto"
+                                                autoplay muted loop playsinline></video>
+                                            <div class="address">
+                                                <p class="badge hc1">The Heiva i Taniti</p>
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf073;</i> 4-20 July
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Experience the vibrant Heiva i Taniti, a lively festival
+                                                celebrating the island’s rich traditions and cultural heritage. Enjoy
+                                                captivating performances of traditional music, dance, and storytelling,
+                                                along with colorful parades and local crafts. This annual event brings the
+                                                community together to honor the island’s history and celebrate its vibrant
+                                                culture in a joyful and unforgettable way.</h2>
+                                        </a>
+                                    </li>
+                                    <li class="swiper-slide">
+                                        <a href="#" class="cardLink">
+                                            <img src="media/pexels-pratik-patil-921241306-28635639.jpg" class="cardImage"></img>
+                                            <div class="address">
+                                                <p class="badge hc1">Matari’i i Ni’a</p>
+                                                <span>
+                                                    <i style="font-size:24px" class="fa">&#xf073;</i> 20 November
+                                                </span>
+                                            </div>
+                                            <h2 class="cardTitle">Immerse yourself in the vibrant festivities of Matari’i i
+                                                Ni’a, a celebration of abundance and prosperity. This cultural event honors
+                                                the harvest season with traditional music, dancing, and feasts showcasing
+                                                the island’s rich heritage. Experience the joy of community gatherings,
+                                                enjoy delicious local dishes, and take part in rituals that celebrate
+                                                nature's bountiful gifts. It’s a time for renewal, gratitude, and
+                                                celebrating the island’s vibrant culture.</h2>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-slide-button swiper-button-prev"></div>
+                                <div class="swiper-slide-button swiper-button-next"></div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="spacer">&nbsp</div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const flightCard = document.querySelector('#flightCard');
+    const cruiseCard = document.querySelector('#cruiseCard');
+    const searchFlights = document.querySelector('#findFlights');
+
+    flightCard.addEventListener('click', () => {
+        let optCardA = document.querySelector('#optCardA');
+        let optCardB = document.querySelector('#optCardB')
+        let defCard = document.querySelector('#optCard')
+
+        console.log('clicked');
+        optCardA.style.display = "block";
+        optCardB.style.display = 'none';
+        defCard.style.display = 'none';
+        flightCard.classList.remove('inactiveCard');
+        cruiseCard.classList.add('inactiveCard');
+
+    });
+
+    cruiseCard.addEventListener('click', () => {
+        let optCardA = document.querySelector('#optCardA');
+        let optCardB = document.querySelector('#optCardB')
+        let defCard = document.querySelector('#optCard')
+
+        optCardB.style.display = "block";
+        optCardA.style.display = 'none';
+        defCard.style.display = 'none';
+        flightCard.classList.add('inactiveCard');
+        cruiseCard.classList.remove('inactiveCard');
+    });
+
+    searchFlights.addEventListener('click', () => {
+        let flightResults = document.querySelector('#flightResults')
+        flightResults.style.display = "block";
+    });
+
+    const hotelBut = document.getElementById('hotelBut')
+    const bbBut = document.getElementById('bbBut')
+    const resortBut = document.getElementById('resortBut')
+    const hotelSlide = document.querySelector('.hotelsSlide')
+    const bbSlide = document.querySelector('.bbSlide')
+    const resortSlide = document.querySelector('.resortSlide')
+    const todoSlide = document.querySelector('.todoSlide')
+    const eventsSlide = document.querySelector('.eventsSlide')
+
+
+    hotelBut.addEventListener('click', () => {
+        console.log('hotelbut clicked');
+        bbBut.classList.remove('active');
+        hotelBut.classList.add('active');
+        resortBut.classList.remove('active');
+
+        hotelSlide.style.display = '';
+        bbSlide.style.display = 'none';
+        resortSlide.style.display = 'none';
+    });
+
+    bbBut.addEventListener('click', () => {
+        bbBut.classList.add('active');
+        hotelBut.classList.remove('active');
+        resortBut.classList.remove('active');
+
+        hotelSlide.style.display = 'none';
+        bbSlide.style.display = '';
+        resortSlide.style.display = 'none';
+    })
+        ;
+    resortBut.addEventListener('click', () => {
+        bbBut.classList.remove('active');
+        hotelBut.classList.remove('active');
+        resortBut.classList.add('active');
+
+        hotelSlide.style.display = 'none';
+        bbSlide.style.display = 'none';
+        resortSlide.style.display = '';
+    })
+
+    todoBut.addEventListener('click', () => {
+        todoBut.classList.add('active');
+        eventsBut.classList.remove('active');
+
+        todoSlide.style.display = '';
+        eventsSlide.style.display = 'none'
+
+    })
+
+    eventsBut.addEventListener('click', () => {
+        todoBut.classList.remove('active');
+        eventsBut.classList.add('active');
+
+
+        todoSlide.style.display = 'none';
+        eventsSlide.style.display = ''
+    })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="script2.js"></script>
+
+</html>

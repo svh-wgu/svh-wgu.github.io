@@ -1,0 +1,620 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    color: #fff;
+    
+    h1 {
+        font-size: 8vw;
+        font-weight: 600; 
+    }
+    
+    h2 {
+        font-size: 4vw;
+        font-weight: 600; 
+    }
+
+    h3 {
+        font-weight: 800;
+        text-shadow: 4px 4px rgba(0, 0, 0, 1);
+         font-size: 3em;
+        color: #fff;
+    }
+
+}
+
+.scrollContainer {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
+        
+    .bgVideo {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        min-width: 100vw;
+        min-height: 100vh;
+        overflow: hidden;
+    }
+    
+
+    .scrollPanel {
+        height: 100vh;
+        width: 100%;
+        scroll-snap-align: start;
+        margin: 0;
+        padding: 0;
+        
+
+        .hero {
+            width: 100%;
+            height: 100%;
+            max-height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            overflow-y: hidden;
+
+            nav {
+                height: 8%;
+                min-height: 8%;
+                max-height: 8%;
+                width: 100%;
+                padding: 0 5%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .logo{
+                    width: 150px;
+                }
+    
+                ul li{
+                    list-style: none;
+                    display: inline-block;
+                    margin-left: 1.5em;
+                }
+    
+                ul li a{
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 700;
+                    font-size: 1.5em;
+                }
+    
+                a:hover{
+                    text-decoration: underline;
+                }
+            }
+    
+            .content {
+                text-align: center;
+                padding: 1em;
+                margin: 1em;
+            }
+            
+            .spacer {
+                min-height: 8%;
+                max-height: 8%;
+                height: 8%;
+                width: 20%;
+            }
+        }
+    }
+
+    .panelHero {
+        .content {
+            place-content: center;
+            margin: 3%;
+            height: 80%;
+            max-height: 80%;
+            max-height: 80%;
+        }
+    }
+
+    .panelAbout, .panelBook, .panelStays, .panelTodo {
+        height: 100%;
+        min-height: 100%;
+        width: 100%;
+        min-width: 100%;
+
+        .content {
+            width: 80%;
+            min-width: 80%;
+            max-width: 80%;
+            background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3));
+            border: 2px solid #fff;
+            border-radius: 1em;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+
+            p {
+                text-align: justify;
+                line-height: 1.5;
+                font-size: 1.5em;
+            }
+        }
+    }
+
+    .panelAbout {
+        .content {
+            padding: 2em !important;
+
+            h2 {
+                margin: 1rem;
+            }
+
+            ul {
+                list-style: none;
+        
+                li {
+                    margin: 1em;
+                    display: inline-block;
+                }
+            }
+        }
+
+    }
+
+    .panelBook {
+
+        .content {
+            width: 100%;
+        }
+        
+        .bookNav {
+            text-align: left;
+
+            span {
+                padding: .25em;
+                font-weight: 600;
+                color: #fff;
+                font-size: 1.5em;
+
+                &:hover {
+                    text-decoration: underline;  
+                }
+            }
+        }
+
+        h2 {
+            margin: .51rem;
+        }
+
+        .bookOpt {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-areas: 
+                "flights options"
+                "cruises options";
+            grid-template-columns: 20% auto;
+            grid-template-rows: 25vh 25vh;
+
+            #flightCard {
+                margin: 0;
+                padding: 0;
+                justify-items: center;
+                grid-area: flights;
+                background: url(media/FLIGHTS\ \(1\).png) center;
+                background-size: cover;
+            }
+
+            #cruiseCard {
+                grid-area: cruises;
+                background: url(media/FLIGHTS\ \(2\).png) center;
+                background-size: cover;
+            }
+                        
+            .card:hover {
+                border: 4px white solid;
+                filter: brightness(1);
+                border-radius: 1em;
+            }
+
+            .inactiveCard {
+                filter: brightness(.7);
+            }
+
+            #optCard  {
+                width: 100%;
+                grid-area: options;
+                text-align: center;
+                margin: auto;
+            }
+            
+            #optCard h2 {
+                font-size: 3em;
+            }
+            
+            #optCardA {
+                grid-area: options;
+                width: 100%;
+                height: 100%;
+                                
+                form {
+                    background-color: rgba(255,255,255,.8);
+                    border-radius: .5em;
+                    padding: 1em;
+                    width: 95%;
+                    height: 100%;
+                    color: #000;
+                    place-self: center;
+
+                    table {
+                        text-align: right;
+                        width: 100%;
+                    }
+                    
+                    a {
+                        background-color: rgba(0,0,0, .5);
+                        margin: 1em;
+
+                        &:hover {
+                            background-color: rgba(0,0,0, .2);
+                        }
+                    }
+                }
+
+                input, select{
+                    margin-bottom: 1em;
+                    padding: 1em;
+                }
+                
+                hr {
+                    place-self: center;
+                    width: 80%;
+                    margin-top: 1em;
+                }
+                
+                #flightSearch {
+
+                    overflow: hidden;
+                }
+
+                #flightResults {
+                place-self: center;
+                width: 100%;
+                margin: 1em;
+                padding: 2em;
+                background-color: #fff;
+
+                    p {               
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.5em;
+                        font-weight: 700;
+
+                        .material-symbols-outlined {
+                            padding-right: .25em;
+                            font-size: 1.5em;
+                            color: red;
+                            font-variation-settings:
+                            'FILL' 1,
+                            'wght' 700,
+                            'GRAD' 200,
+                            'opsz' 48
+                        }
+                    }
+                }
+            }
+            
+            #optCardB {
+                grid-area: options;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                table {
+                    width: 100%;
+                }
+
+                .cruiseCard {
+                    background-color: rgba(255,255,255,.8);
+                    color: #000;
+                    border-radius: .5em;
+                    margin: 1em auto;
+                    padding: 1em;
+                    width: 95%;
+                    display: flex;
+                    flex-direction: row;
+
+                    img {
+                        width: 40%;
+                        aspect-ratio: 4/3;
+                        border: 4px white solid;
+                        border-radius: 1em;
+                    }
+
+                    hr {
+                        border:  1px solid rgba(0,0,0, .5);
+                        width: 80%;
+                        margin: 1em;
+                        place-self: center;
+                    }
+
+                    form {
+                        text-align: left;
+                        background-color: rgba(0,0,0,0);
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    ul li {
+                        text-align: left;
+                        list-style: none;
+                        display: inline-block;
+                        margin-left: 5%;
+                        width: 100%;
+                        line-height: 2em;
+
+                        a {
+                            display:block;
+                            margin-left:auto;
+                            margin-right:auto;
+                            width: 60%;
+                            text-align: center;
+                            font-size: 1.25em;
+                            font-weight: 600;
+                            background-color: rgba(0,0,0,.5);
+                            line-height: 1;
+                            margin-top: 1em;
+
+                            &:hover {
+                                background-color: rgba(0,0,0,.3);
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    .cruiseCompany {
+                        font-weight: 800;
+                        font-size: 1.5em;
+                        font-style: oblique;
+                        margin: .5em 0 0 1.5em;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .panelStays, .panelTodo {
+
+        .stayNav {
+            margin-top: .5em;
+            width: 100%;
+            
+            ul {
+                list-style: none;
+        
+                li {
+                    display: inline-block;
+                    box-sizing: border-box;
+                }
+            }
+        }
+
+        .content {
+
+            .hotelsSlide, .bbSlide, .resortSlide, .todoSlide, .eventsSlide {
+
+                .swiper {
+
+
+                    background: none;
+                    margin: 0;
+                    border: none;
+                    width: 100%;
+                    min-width: 100%;
+                    max-width: 100%;
+                    height: 100%;
+                    max-height: 100%;
+                    overflow: hidden;
+                    place-self: center;
+
+
+                    .swiper-pagination {
+                        font-size: 1.75em;
+                        color: #fff;
+                        font-weight: 600;
+                    } 
+            
+                    .swiper-slide-button {
+                        color: #fff;
+                        font-weight: 800;
+                        
+                        &:hover {
+                            color: #fff;
+                            text-shadow: 2px 2px 20px white;
+                        }
+                    }
+                
+                    .swiper-slide.swiper-slide-active {
+
+                        .cardLink {
+                        box-shadow: .4em .45em .5em rgba(255,255,255, .5);
+                        }
+                    }
+                
+                    .swiper-slide:not(.swiper-slide-active) {
+                    filter: brightness(.5);
+                    opacity: .8;
+                    }
+                }
+            }
+        }  
+    }
+
+    .panelTodo {
+        span {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cardLink {
+            justify-content: center;
+        }
+
+        .address {
+            width: 100%;
+            place-self: center;
+            margin: 0 !important;
+            padding: 0 1em;
+            align-items: center;
+        }
+
+        .sC {
+            place-self: center;
+        }
+    }
+}
+
+
+.ctaButton {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 500;
+    border: 2px solid #fff;
+    padding: .5em 2.5em;
+    border-radius: .5em;
+    background-color: rgba(0,0,0, .2);
+
+    &:hover {
+        background-color: rgba(255,255,255,.4);
+        text-decoration: underline;
+    }
+}
+
+.active {
+    background-color: #5372F0;
+
+    &:hover {
+        background-color: #5372F0;
+    }
+
+}
+
+
+.swiper-container {
+    width: 90%;
+    height: 100%;
+    padding: 2em;
+    overflow-x: hidden;
+    place-self: center;
+
+    .swiper-wrapper {
+
+        .swiper-slide {
+            
+    
+            .cardLink {
+                background-color: #fff;
+                user-select: none;
+                display: block;
+                padding: 1.2em;
+                border-radius:  1em;
+                text-decoration: none;
+                border: 2px solid  transparent;
+                height: 100%;
+                margin-top: 0;
+    
+                .stars {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+    
+                .fa {
+                    font-size: 1.5em;
+                    color: grey;
+                }
+            
+                .checked {
+                    font-size: 1.5em;
+                    color: orange;
+                };
+    
+               .cardImage  {
+                    width: 90%;
+                    max-width: 90%;
+                    aspect-ratio: 2.35/1;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: .5em;
+                };
+    
+                .badge {
+                    color: #ffff;
+                    padding: .25em 1.5em;
+                    font-size: 1.5em;
+                    font-weight: 600;
+                    background-color: #5372F0;
+                    width: fit-content;
+                    border-radius: .5em;
+                    margin-top: .25em;
+                };
+    
+                .cardTitle {
+                    margin-top: .5em;
+                    font-size: 1.2em;
+                    color: #000;
+                    font-weight: 400;
+                    text-align: justify;
+                };
+    
+                .address {
+                    display: flex;
+                    justify-content: space-between;
+                    color: #000;
+                    font-size: 1.25em;
+                    font-weight: 600;
+                    justify-items: flex-start;
+                    margin: .5em 1em 0 1.75em;
+
+                    i {
+                        font-size: 1.25em;
+                    }
+                }
+                
+                .rating {
+                    margin-right: 1em;
+                }
+            };
+    
+            .cardLink:hover {
+                border-color: #5372F0;
+    
+                .cardButton {
+                    color: #fff;
+                    background: rgba(0, 0, 0, .3);
+                }
+            }
+        }
+    };
+
+}
+
+
+:root {   --swiper-navigation-size: 4.5em !important}
