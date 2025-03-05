@@ -212,13 +212,13 @@ body {
                 padding: 0;
                 justify-items: center;
                 grid-area: flights;
-                background: url(media/FLIGHTS\ \(1\).png) center;
+                background: url(media/FLIGHTS1).png) center;
                 background-size: cover;
             }
 
             #cruiseCard {
                 grid-area: cruises;
-                background: url(media/FLIGHTS\ \(2\).png) center;
+                background: url(media/FLIGHTS2).png) center;
                 background-size: cover;
             }
                         
